@@ -40,3 +40,16 @@ checkpoint-YYYYQn <sha256 of the quarterly checkpoint record>
 
 The rules for the tracking were fixed before the first entry. Each entry records the SHA-256 of
 the rules file it was written under, so the rules are covered by the same hashes.
+
+## A second file: `hashesWide.txt`
+
+From 2026-10-12 the same rule is also tracked on a second, wider set of stocks, under its own
+rules that were fixed before its first entry. That ledger is separate, and its lines go to
+`hashesWide.txt`, append-only, in the same format:
+
+```
+YYYY-MM-DD <sha256 of the entry>
+read-YYYYQn <sha256 of a read record>
+```
+
+`hashes.txt` is never changed by it.
